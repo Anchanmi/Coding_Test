@@ -6,6 +6,7 @@ import java.util.StringTokenizer;
 public class Main {
 
 	public static void main(String[] args) throws IOException{
+		// TODO Auto-generated method stub
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		StringBuilder str = new StringBuilder();
@@ -15,22 +16,20 @@ public class Main {
 		
 		if(N >= 1 && N <= 10000 && X >= 1 && X <= 10000) {
 			int[] arr = new int[N];
+			int cnt = 0;
 			
 			st = new StringTokenizer(br.readLine());
 			for(int i = 0; i < N; i++) {
 				arr[i] = Integer.parseInt(st.nextToken());
-			}
-			int cnt = 0;
-			
-			for(int i : arr) {
-				if(X > i) {
-					str.append(i + " ");
+				if(arr[i] < X) {
+					str.append(arr[i] + " ");
 					cnt++;
 				}
 			}
 			if(cnt > 0) {
 				System.out.println(str);
 			}
+			
 		}
 		
 	}
