@@ -13,33 +13,26 @@ public class Main {
 		int N = Integer.parseInt(st.nextToken());
 		int M = Integer.parseInt(st.nextToken());
 		
-		int[][] arr1 = new int[N][M];
-		int[][] arr2 = new int[N][M];
-		int[][] result = new int[N][M];
+		int[][] arr = new int[N][M];
 		
 		for(int i = 0; i < N; i++) {
 			st = new StringTokenizer(br.readLine());
 			for(int j = 0; j < M; j++) {
-				arr1[i][j] = Integer.parseInt(st.nextToken());
+				arr[i][j] = Integer.parseInt(st.nextToken());
 			}
 		}
 		
 		for(int i = 0; i < N; i++) {
 			st = new StringTokenizer(br.readLine());
 			for(int j = 0; j < M; j++) {
-				arr2[i][j] = Integer.parseInt(st.nextToken());
-			}
-		}
-		
-		for(int i = 0; i < N; i++) {
-			for(int j = 0; j < M; j++) {
-				result[i][j] = arr1[i][j] +  arr2[i][j];
-				sb.append(result[i][j] + " ");
+				arr[i][j] += Integer.parseInt(st.nextToken());
+				sb.append(arr[i][j] + " ");
 			}
 			sb.append("\n");
 		}
 		
 		System.out.println(sb);
+		
 	}
 
 }
